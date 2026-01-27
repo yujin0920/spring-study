@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Gothic:wght@400;700&display=swap");
+
+:root {
+    --ink: #11223f;
+    --muted: #5d6a7f;
+    --accent: #ff7a59;
+    --bg: #f5f0ea;
+    --panel: #ffffff;
+    --shadow: 0 18px 45px rgba(16, 32, 64, 0.12);
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nanum Gothic", sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at top left, rgba(255, 210, 170, 0.45), transparent 45%),
+        radial-gradient(circle at 70% 0%, rgba(170, 220, 255, 0.5), transparent 40%),
+        var(--bg);
+}
+
+.page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 36px 24px 64px;
+}
+
+.hero {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 32px;
+    border-radius: var(--radius);
+    background: linear-gradient(120deg, #fff7ed 0%, #f1f7ff 100%);
+    box-shadow: var(--shadow);
+}
+
+.hero__content {
+    max-width: 620px;
+}
+
+.hero__eyebrow {
+    font-family: "Gowun Dodum", sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 0 0 10px;
+}
+
+.hero__title {
+    margin: 0 0 10px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.hero__subtitle {
+    margin: 0 0 20px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.hero__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.legend-chip {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.legend-chip--apply { background: #2f80ed; }
+.legend-chip--test { background: #f2994a; }
+.legend-chip--interview { background: #9b51e0; }
+.legend-chip--result { background: #27ae60; }
+
+.hero__meta {
+    display: grid;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.meta-card {
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(16, 32, 64, 0.08);
+}
+
+.meta-card__label {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.meta-card__value {
+    margin: 6px 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.calendar-shell {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    align-items: start;
+}
+
+#calendar {
+    background: var(--panel);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.side-panel__title {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+.side-panel__card {
+    background: var(--panel);
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(16, 32, 64, 0.08);
+}
+
+.side-panel__headline {
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.side-panel__list {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.side-panel__next {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.side-panel__footnote {
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+.fc {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.35rem;
+}
+
+.fc .fc-daygrid-day-number {
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: rgba(255, 122, 89, 0.15);
+}
+
+.fc .fc-button {
+    border-radius: 999px;
+    border: none;
+    background: var(--ink);
+    color: #ffffff;
+    padding: 6px 14px;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    background: var(--accent);
+}
+
+.fc-event {
+    border: none;
+    border-radius: 10px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+.event-chip {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.event-chip__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero__meta {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    .calendar-shell {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .page {
+        padding: 24px 16px 48px;
+    }
+
+    .hero {
+        padding: 22px;
+    }
+
+    #calendar {
+        padding: 14px;
+    }
+}

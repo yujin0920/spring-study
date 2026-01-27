@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>공공기관·공기업 취업 일정 캘린더</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <div class="hero__content">
+                <p class="hero__eyebrow">Public Hire Calendar</p>
+                <h1 class="hero__title">공공기관·공기업 취업 일정</h1>
+                <p class="hero__subtitle">지원 마감, 필기, 면접, 최종 발표까지 한 번에 관리하세요.</p>
+                <div class="hero__legend">
+                    <span class="legend-chip legend-chip--apply">서류 접수</span>
+                    <span class="legend-chip legend-chip--test">필기/인성</span>
+                    <span class="legend-chip legend-chip--interview">면접</span>
+                    <span class="legend-chip legend-chip--result">최종 발표</span>
+                </div>
+            </div>
+            <div class="hero__meta">
+                <div class="meta-card">
+                    <p class="meta-card__label">이번 달 주요 일정</p>
+                    <p class="meta-card__value" id="monthSummary">로딩 중...</p>
+                </div>
+                <div class="meta-card">
+                    <p class="meta-card__label">오늘</p>
+                    <p class="meta-card__value" id="todayDate">-</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="calendar-shell">
+            <div id="calendar"></div>
+            <aside class="side-panel">
+                <h2 class="side-panel__title">오늘 할 일</h2>
+                <div class="side-panel__card">
+                    <p class="side-panel__headline">마감 체크</p>
+                    <ul class="side-panel__list" id="todayChecklist">
+                        <li>오늘 일정이 없습니다.</li>
+                    </ul>
+                </div>
+                <div class="side-panel__card">
+                    <p class="side-panel__headline">다음 일정</p>
+                    <div class="side-panel__next" id="nextEvent">다음 일정을 불러오는 중...</div>
+                </div>
+                <div class="side-panel__footnote">
+                    일정은 예시 데이터입니다. 실제 채용 공고를 반영하도록 수정하세요.
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
